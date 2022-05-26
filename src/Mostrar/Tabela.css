@@ -1,0 +1,7 @@
+.Tabela{
+    width: 70%;
+    height:800px;
+    display: flex;
+    align-items: center;
+    margin-left:200px ;
+}
