@@ -1,4 +1,4 @@
-import { Table } from "react-bootstrap";
+import { Button, Table } from "react-bootstrap";
 import "./Tabela.css"
 function Get() {
   const alunos = [
@@ -11,12 +11,15 @@ function Get() {
   console.log(alunos);
   return (
     <div className="Tabela">
-      <Table striped bordered hover>
+      <Table striped bordered hover variant="dark">
         <thead>
-          <th>Matricula</th>
-          <th>Nome</th>
-          <th>Turma</th>
-          <th>Nota</th>
+          <tr>
+            <th>Matricula</th>
+            <th>Nome</th>
+            <th>Turma</th>
+            <th>Nota</th>
+            <th>Alterações</th>
+          </tr>
         </thead>
         <tbody>
           {alunos.map((aluno) => (
@@ -25,6 +28,8 @@ function Get() {
               <td>{aluno.nome}</td>
               <td>{aluno.turma}</td>
               <td>{aluno.nota}</td>
+              <td>
+                <Button variant="danger" > Excluir </Button></td>
             </tr>
           ))}
         </tbody>
